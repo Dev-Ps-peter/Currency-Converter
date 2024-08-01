@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+        .converter {
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .converter h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .converter label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #555;
+        }
+        .converter input,
+        .converter select,
+        .converter button {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .converter input:focus,
+        .converter select:focus,
+        .converter button:focus {
+            outline: none;
+            border-color: #2575fc;
+        }
+        .converter button {
+            background-color: #2575fc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .converter button:hover {
+            background-color: #1a5bbf;
+        }
+        .converter h2 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h1>Currency Converter</h1>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+        
+        <label for="fromCurrency">From</label>
+        <select id="fromCurrency"></select>
+        
+        <label for="toCurrency">To</label>
+        <select id="toCurrency"></select>
+        
+        <button id="convert">Convert</button>
+        
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
